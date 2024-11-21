@@ -27,7 +27,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: var(--font-main);
-            line-height: 1.6;
+            line-height: 1.4; /* Reduced line height */
             scroll-behavior: smooth;
         }
 
@@ -37,9 +37,15 @@
             width: 100%;
             background-color: var(--menu-bg-color);
             display: flex;
-            justify-content: center;
-            padding: 15px 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
             z-index: 1000;
+        }
+
+        #navbar img {
+            width: 50px;
+            height: auto;
         }
 
         #navbar a {
@@ -101,6 +107,72 @@
             animation: underline 1s forwards;
         }
 
+        p {
+            margin-bottom: 10px; /* Reduced gap between paragraphs */
+            color: var(--text-color);
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+            #navbar img {
+                width: 40px;
+            }
+            #navbar a {
+                margin: 0 10px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-content {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #navbar {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            #navbar a {
+                margin: 5px 0;
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .section-content {
+                max-width: 85%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            #navbar {
+                padding: 8px 15px;
+            }
+            #navbar img {
+                width: 30px;
+            }
+            #navbar a {
+                margin: 3px 0;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-content {
+                max-width: 90%;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
         @keyframes underline {
             0% { width: 0; }
             100% { width: 100%; }
@@ -110,27 +182,21 @@
             from { width: 0; }
             to { width: 100%; }
         }
-
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 1.8rem;
-            }
-            #navbar a {
-                margin: 0 10px;
-                font-size: 0.9rem;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar with Logo -->
     <nav id="navbar">
-        <a href="#values">Values</a>
-        <a href="#truths">Truths</a>
-        <a href="#pursuit">Pursuit</a>
-        <a href="#ideal-world">Ideal world</a>
-        <a href="#ideal-life">Ideal life</a>
-        <a href="#shaping-world">Shaping world</a>
-        <a href="#world-vision">World vision</a>
+        <img src="mandala-vecteur-blanc_3450-9.avif" alt="Logo">
+        <div>
+            <a href="#values">Values</a>
+            <a href="#truths">Truths</a>
+            <a href="#pursuit">Pursuit</a>
+            <a href="#ideal-world">Ideal world</a>
+            <a href="#ideal-life">Ideal life</a>
+            <a href="#shaping-world">Shaping world</a>
+            <a href="#world-vision">World vision</a>
+        </div>
     </nav>
 
     <section id="values" class="section">
